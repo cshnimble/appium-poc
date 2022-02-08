@@ -16,8 +16,9 @@ public class FirstScreen extends BasePage {
     public MobileElement textElement;
 
 //    @AndroidFindBy(className = "android.widget.Button")
-    @AndroidFindBy(xpath = "//android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View")
-    @iOSXCUITFindBy(className = "")
+    @AndroidFindBy(xpath = "//android.view.View[@content-desc='nextButton']")
+//    @AndroidFindBy(xpath = "//android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View")
+    @iOSXCUITFindBy(className = "nextButton")
     public MobileElement buttonElement;
 
     public String getHeaderText() {

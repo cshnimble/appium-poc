@@ -2,6 +2,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
+import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -27,7 +28,12 @@ public class BaseTest {
 
     @Before
     public void resetApp() {
-        driver.resetApp();
+//        driver.resetApp();
+    }
+
+    @After
+    public void closeApp() {
+        driver.closeApp();
     }
 
     @AfterClass

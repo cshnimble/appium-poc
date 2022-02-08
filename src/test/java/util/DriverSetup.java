@@ -49,9 +49,17 @@ public class DriverSetup {
 
         capabilities.setCapability(MobileCapabilityType.APP, app.getCanonicalPath());
         capabilities.setCapability(MobileCapabilityType.NO_RESET, true);
-        capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, DriverType.ANDROID.driverType);
+        capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "Espresso");
+        capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
+        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "12");
+        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel 6");
+        capabilities.setCapability("espressoBuildConfig", "{ \"additionalAppDependencies\": [ \"com.google.android.material:material:1.0.0\", \"androidx.lifecycle:lifecycle-extensions:2.1.0\" ] }");
 
-        return new AndroidDriver(allocateHub(), capabilities);
+        AndroidDriver driver = new AndroidDriver(allocateHub(), capabilities);
+
+        driver.setSetting("driver", "compose");
+
+        return driver;
     }
 
     private URL allocateHub() throws MalformedURLException {
