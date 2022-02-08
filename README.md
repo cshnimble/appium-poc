@@ -33,3 +33,11 @@ Run `./gradlew test` from your terminal
 > You will need to enable any real device you are working with for appium, details can be found for
 > [iOS](https://appium.io/docs/en/drivers/ios-xcuitest-real-devices/)
 > and for [Android](https://appium.io/docs/en/drivers/android-uiautomator2/#real-device-setup).
+
+## Improvements
+
+* iOS support
+* Emulated device support
+* Expand DesiredCapabilities to allow for greater device configuration
+* Dockerise tests
+* Expand test coverage along with app (e.g. entering text into forms)
