@@ -2,7 +2,7 @@
 
 This is a very basic app automation framework done as a PoC.
 
-It uses [Appium](appium.io) as a base.
+It uses [Appium](https://appium.io) as a base.
 
 ## Requirements
 
